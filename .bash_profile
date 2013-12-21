@@ -4,7 +4,7 @@ export PS1='$ '
 
 #yep, that's probably what I meant.
 alias ..='cd ..'
-alias ls='ls -Alr'
+alias ls='ls -FAltr'
 alias sl='ls'
 
 #and this makes dealing with hidden files on OSX just a little simpler
