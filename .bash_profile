@@ -10,5 +10,8 @@ alias sl='ls'
 #and this makes dealing with hidden files on OSX just a little simpler
 alias txt='open -a /Applications/Sublime\ Text\ 2.app'
 
+#starting to scheme again
+alias rkt='open -a /Applications/Racket\ v5.3.6/DrRacket.app/'
+
 #make erlang manual play nicely with others
 export MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man/
