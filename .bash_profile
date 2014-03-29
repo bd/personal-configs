@@ -13,5 +13,8 @@ alias txt='open -a /Applications/Sublime\ Text\ 2.app'
 #starting to scheme again
 alias rkt='open -a /Applications/Racket\ v5.3.6/DrRacket.app/'
 
+# fixes python version issue
+export PATH=/usr/local/bin:$PATH
+
 #make erlang manual play nicely with others
 export MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man/
