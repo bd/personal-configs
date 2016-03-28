@@ -8,7 +8,7 @@ alias ll='ls -FAltr'
 alias sl='ls'
 
 #and this makes dealing with hidden files on OSX just a little simpler
-alias txt='open -a /Applications/Sublime\ Text\ 2.app'
+alias txt='open -a /Applications/Sublime\ Text.app'
 
 #starting to scheme again
 alias rkt='open -a /Applications/Racket\ v5.3.6/DrRacket.app/'
