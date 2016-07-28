@@ -12,6 +12,10 @@ alias txt='open -a /Applications/Sublime\ Text.app'
 
 alias revert='git stash save --keep-index; git stash drop'
 
+newbranch() {
+	git checkout -b $1 && git push --set-upstream origin $1
+}
+`
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
     GIT_PROMPT_THEME=Default
     source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
