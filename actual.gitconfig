@@ -1,0 +1,8 @@
+[user]
+	name = Ben Dean
+	email = bddbbd.b@gmail.com
+[push]
+	default = simple
+[alias]
+	up = pull --rebase --autostash
+	commend = commit --amend --no-edit
