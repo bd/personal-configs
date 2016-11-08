@@ -11,14 +11,36 @@ alias sl='ls'
 alias txt='open -a /Applications/Sublime\ Text.app'
 
 alias revert='git stash save --keep-index; git stash drop'
+alias checkout='git checkout'
+alias push='git push'
+alias branch='git branch'
+alias status='git status'
+alias commit='git commit'
+alias fetch='git fetch'
+alias rebase='git rebase'
 
 newbranch() {
 	git checkout -b $1 && git push --set-upstream origin $1
 }
-`
+
+upstream() {
+	git push --set-upstream origin $1
+}
+
+rebasefrom() {
+	local current_branch=$(git symbolic-ref --short HEAD)
+	local from_branch=$1
+	checkout $from_branch && git up && checkout $current_branch && git rebase $from_branch
+}
+
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
     GIT_PROMPT_THEME=Default
     source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+fi
+
+# bash completion for git
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi
 
 
@@ -39,4 +61,5 @@ export NVM_DIR="/Users/bendean/.nvm"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 # Finished adapting your PATH environment variable for use with MacPorts.
+
 
