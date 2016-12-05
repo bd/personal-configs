@@ -19,6 +19,8 @@ alias commit='git commit'
 alias fetch='git fetch'
 alias rebase='git rebase'
 
+git config --global alias.up 'pull --rebase --autostash'
+
 newbranch() {
 	git checkout -b $1 && git push --set-upstream origin $1
 }
@@ -61,5 +63,4 @@ export NVM_DIR="/Users/bendean/.nvm"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 # Finished adapting your PATH environment variable for use with MacPorts.
-
 
