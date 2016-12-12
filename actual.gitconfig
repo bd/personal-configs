@@ -4,5 +4,5 @@
 [push]
 	default = simple
 [alias]
-	up = pull --rebase --autostash
-	commend = commit --amend --no-edit
+	up = pull upstream --rebase --autostash
+	commend = commit -a --amend --no-edit
