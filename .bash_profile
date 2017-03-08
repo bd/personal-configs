@@ -38,17 +38,17 @@ rebasefrom() {
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 
-
 # fixes python version issue
 export PATH=/usr/local/bin:$PATH
 export PYTHONSTARTUP=$HOME'/.pythonstartup.py'
 
 #make erlang manual play nicely with others
 export MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man/
-export NVM_DIR="/Users/bendean/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # MacPorts Installer addition on 2016-04-14_at_15:18:13: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 # Finished adapting your PATH environment variable for use with MacPorts.
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
