@@ -35,10 +35,7 @@ rebasefrom() {
 	checkout $from_branch && git up && checkout $current_branch && git rebase $from_branch
 }
 
-if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-    GIT_PROMPT_THEME=Default
-    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
-fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 
 
@@ -51,12 +48,7 @@ export MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man/
 export NVM_DIR="/Users/bendean/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-##
-# Your previous /Users/bendean/.bash_profile file was backed up as /Users/bendean/.bash_profile.macports-saved_2016-04-14_at_15:18:13
-##
-
 # MacPorts Installer addition on 2016-04-14_at_15:18:13: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 # Finished adapting your PATH environment variable for use with MacPorts.
-
